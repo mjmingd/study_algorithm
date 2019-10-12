@@ -26,7 +26,7 @@ class Solution:
                 
                 # 조건에 맞게 설정
                 if tmp[r][c] == 1 :
-                    if cond not in [2, 3] :
+                    if cond != 2 and cond != 3 :
                         board[r-1][c-1] = 0
                 else :
                     if cond == 3 :
