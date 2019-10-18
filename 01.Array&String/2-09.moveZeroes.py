@@ -2,7 +2,7 @@
 # https://leetcode.com/problems/move-zeroes/
 
 class Solution:
-    def moveZeroes(self, nums: List[int]) -> None:
+    def moveZeroes2(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
         time complexity : O(NlogN)
@@ -12,3 +12,17 @@ class Solution:
             return (0,) if n != 0 else (1,0)
         
         nums.sort(key= sorting)
+
+        
+    def moveZeroes1(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        count = 0 
+        for i in range(len(nums)-1) :
+            i = i - count
+            if nums[i] == 0 :
+                count += 1
+                nums.pop(i)
+        
+        nums.extend([0]*count)
