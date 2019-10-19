@@ -2,7 +2,7 @@
 # https://leetcode.com/problems/spiral-matrix/
 
 class Solution:
-    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+    def spiralOrder2(self, matrix: List[List[int]]) -> List[int]:
     '''
     time complexity : O(MN)
     space complexity : O(1)
@@ -46,4 +46,7 @@ class Solution:
                     ret.append(matrix[t][j])
                 
         return ret
+    
+    def spiralOrder1(self, matrix: List[List[int]]) -> List[int]:
+        return matrix and [*matrix.pop(0)] + self.spiralOrder([*zip(*matrix)][::-1])
 
