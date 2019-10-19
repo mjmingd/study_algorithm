@@ -4,7 +4,7 @@
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
     '''
-    time complexity : O(O(3^N * 4^M)
+    time complexity : O(3^N * 4^M)
     space complexity : O(3^N * 4^M))
     '''
     
