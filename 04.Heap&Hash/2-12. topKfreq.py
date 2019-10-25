@@ -11,7 +11,6 @@ class Solution:
     '''
     
         dict_ = Counter(nums)
-        print(dict_)
         ret =  sorted(dict_, key= lambda x : dict_[x], reverse=True)
         return ret[:k]
         
