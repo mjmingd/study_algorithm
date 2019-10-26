@@ -8,7 +8,7 @@ class Solution:
           2. 1 <= words[i].length <= 16
           3. words[i] only consists of English lowercase letters.
           
-    time complexity : O(N)
+    time complexity : O(kN) ; k is number of chains
     space complexity : O(N)
     '''
     
