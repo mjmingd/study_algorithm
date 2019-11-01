@@ -11,7 +11,7 @@
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         '''
-        time complexity : O(N)
+        time complexity : O(max(M,N))
         space complexity : O(1)
         '''
         
