@@ -11,8 +11,8 @@ class Solution:
         if not T : return T
         stack, ret= [], [0 for i in range(len(T))]
         for i, t in enumerate(T):
-            while stack and stack[-1][1] < t :
-                tmp_i = stack.pop()[0]
+            while stack and T[stack[-1]] < t :
+                tmp_i = stack.pop()
                 ret[tmp_i] = i - tmp_i
-            stack.append((i,t))
+            stack.append(i)
         return ret
