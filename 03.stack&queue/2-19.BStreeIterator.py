@@ -10,14 +10,15 @@ from collections import deque
 #         self.left = None
 #         self.right = None
 
-class BSTIterator:
+class BSTIterator: #recursion
     ''' 
     time complexity : O(N)/ O(1)/ O(1)
     space complexity : O(N)
     '''
     
     def __init__(self, root: TreeNode):
-        self.dec = self.inorder(root)
+        self.dec = deque()
+        self.inorder(root)
         
     def next(self) -> int:
         """
@@ -32,12 +33,10 @@ class BSTIterator:
         return True if self.dec else False
             
     def inorder(self, root) :
-        self.dec = deque()
-        if root :
-            self.dec = self.inorder(root.left)
-            self.dec.append(root.val)
-            self.dec = self.dec + self.inorder(root.right)
-        return self.dec
+        if not root : return
+        self.inorder(root.left)
+        self.dec.append(root.val)
+        self.inorder(root.right)
 
 # Your BSTIterator object will be instantiated and called as such:
 # obj = BSTIterator(root)
