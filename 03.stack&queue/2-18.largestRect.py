@@ -1,6 +1,7 @@
 # Largest Rectangle in Histogram
 # https://leetcode.com/problems/largest-rectangle-in-histogram/
-# references : https://www.geeksforgeeks.org/largest-rectangular-area-in-a-histogram-set-1/
+# references : https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/28963/Python-solution-without-using-stack.-(with-explanation)
+#              https://www.geeksforgeeks.org/largest-rectangular-area-in-a-histogram-set-1/
 
 class Solution:
     def largestRectangleArea(self, heights: List[int]) -> int:
