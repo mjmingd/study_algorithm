@@ -9,7 +9,6 @@ class Solution:
         if len(nums) <= 2 : return max(nums)
         
         dp = defaultdict(int)
-        dp[0], dp[1] = 0 , nums[0]
         
         for i in range(len(nums)) :
             dp[i] = max(dp[i-2] + nums[i], dp[i-1])
