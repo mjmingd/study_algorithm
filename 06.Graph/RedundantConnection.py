@@ -3,7 +3,7 @@
 
 
 '''
-solution 2 : using Union-Find
+solution 2 : Union-Find
 time complexity : O(N)
 space complexity : O(N)
 '''
@@ -44,6 +44,7 @@ class Solution:
 solution 1 : dfs
 time complexity : O(N^2)
 space complexity : O(N)
+'''
 
 from collections import defaultdict
 
