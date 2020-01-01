@@ -48,6 +48,22 @@ Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized cop
 
 '''
 
+def solution2(X, A):
+   '''
+    time complexity : O(N)
+    space complexity : O(N)
+    '''
+    river, cnt = [False] * (X+1), 0
+    for t, leaf in enumerate(A) :
+        if leaf <= X and not river[leaf]: 
+            river[leaf] = True
+            cnt += 1
+            if cnt == X : return t
+        
+    else :
+        return -1
+
+
 def solution1(X, A):
     '''
     time complexity : O(N^2) -> TLE
