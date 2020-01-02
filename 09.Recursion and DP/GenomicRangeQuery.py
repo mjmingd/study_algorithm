@@ -42,7 +42,7 @@ string S consists only of upper-case English letters A, C, G, T.
 Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
 '''
 
-def solution1(S, P, Q):
+def solution2(S, P, Q):
     '''
     time complexity : O(N+M)
     space complexity : O(M)
