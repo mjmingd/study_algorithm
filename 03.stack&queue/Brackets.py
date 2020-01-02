@@ -1,5 +1,6 @@
 '''
 Codility - Brackets
+# There is same question at leetcode(Valid Parentheses)
 
 A string S consisting of N characters is considered to be properly nested if any of the following conditions is true:
 
