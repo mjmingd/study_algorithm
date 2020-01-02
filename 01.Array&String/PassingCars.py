@@ -43,7 +43,24 @@ each element of array A is an integer that can have one of the following values:
 Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
 '''
 
-def solution(A):
+def solution2(A):
+    '''
+    time complexity : O(N)
+    space complexity : O(1)
+    '''
+    
+    west, ans = 0, 0
+    
+    for i in range(len(A)-1,-1,-1) :
+        if A[i] == 0 :
+            ans += west
+        else :
+            west += 1
+    
+    return -1 if ans > 1000000000 else ans
+
+
+def solution1(A):
     '''
     time complexity : O(N^2) -> TLE
     space complexity : O(N)
