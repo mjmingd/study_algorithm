@@ -42,6 +42,37 @@ string S consists only of upper-case English letters A, C, G, T.
 Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
 '''
 
+def solution1(S, P, Q):
+    '''
+    time complexity : O(N+M)
+    space complexity : O(M)
+    '''
+    M, N = len(P), len(S)
+    A = [[0, 0, 0, 0]]
+    counter = [0] * 4
+    result = []
+    for i in S:
+        if i == "A":
+            counter[0] += 1
+            A.append(counter[:])
+        elif i == "C":
+            counter[1] += 1
+            A.append(counter[:])
+        elif i == "G":
+            counter[2] += 1
+            A.append(counter[:])
+        elif i == "T":
+            counter[3] += 1
+            A.append(counter[:])
+    
+    for i in range(M):
+        for j in range(4):
+            val = A[Q[i]+1][j] - A[P[i]][j]
+            if val != 0:
+                result.append(j + 1)
+                break
+    
+    return result
 
 def solution1(S, P, Q):
     '''
