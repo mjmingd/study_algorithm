@@ -45,7 +45,7 @@ Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized cop
 
 def solution1(S, P, Q):
     '''
-    time complexity : O(N*M)
+    time complexity : O(N*M) -> TLE
     space complexity : O(S+M)
     '''
     
