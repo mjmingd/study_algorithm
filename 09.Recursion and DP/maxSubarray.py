@@ -1,5 +1,6 @@
 # Maximum Subarray
 # https://leetcode.com/problems/maximum-subarray/
+# There is same question at Codility(MaxSliceSum)
 
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
