@@ -47,7 +47,32 @@ Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized cop
 
 
 from collections import Counter
+# Solution 2
+def solution2(A):
+    '''
+    time complexity :O(N)
+    space complextiy : O(N)
+    '''
+    
+    # find leader
+    if not A : return 0
+    cnt, thres = Counter(A), len(A)//2
+    leader = max(cnt, key=lambda x : cnt[x])
+    
+    if cnt[leader] <= thres : return 0
 
+    ret, acc = 0, 0
+    
+    for i in range(len(A)) :
+        if A[i] == leader :
+            acc += 1
+        if acc > (i+1) // 2 and (cnt[leader] - acc) > (len(A)-i-1)//2 : ret += 1
+        
+    return ret
+        
+
+
+# Solution 1
 def findLeader(lst):
     if not lst : return (False, )
     cnt, thres = Counter(lst), len(lst)//2
