@@ -34,6 +34,11 @@ Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized cop
 from collections import Counter
 
 def solution(A):
+    '''
+    time complexity : O(N)
+    space complexity : O(N)
+    '''
+  
     if not A : return -1
     cnt, thres = Counter(A), len(A)//2
     dominator = max(cnt, key=lambda x : cnt[x])
